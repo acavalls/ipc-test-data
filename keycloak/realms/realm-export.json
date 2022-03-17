@@ -2541,6 +2541,29 @@
       }
     },
     {
+      "id":"7d7a7795-9e58-4c84-92c2-7944fcfd3a26",
+      "username": "dac-manager",
+      "enabled": true,
+      "email": "dac-manager@test.com",
+      "firstName": "dac-manager",
+      "lastName": "dac-manager",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "dac-manager"
+        }
+      ],
+      "realmRoles": [
+        "app-dac-manager" 
+      ],
+      "clientRoles": {
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    },
+    {
       "id":"fa111014-1635-4708-b262-e8f6913d4bdb",
       "username": "dac-admin",
       "enabled": true,
@@ -2802,6 +2825,27 @@
       }
     },
     {
+      "id": "2f7739f7-15ea-45b9-a1ca-0b1ba1abf45e",
+      "createdTimestamp": 1647507891728,
+      "username": "service-account-dac-management",
+      "enabled": true,
+      "totp": false,
+      "emailVerified": false,
+      "serviceAccountClientId": "dac-management",
+      "disableableCredentialTypes": [],
+      "requiredActions": [],
+      "realmRoles": [
+        "default-roles-ipc"
+      ],
+      "clientRoles": {
+        "dac-management": [
+          "uma_protection"
+        ]
+      },
+      "notBefore": 0,
+      "groups": []
+    },
+    {
       "id": "3a7d7227-d0ff-4c21-9796-0be123d6724f",
       "createdTimestamp": 1636461282718,
       "username": "service-account-dac-portal-api",
@@ -2885,6 +2929,14 @@
             ]
           }
         },
+        "clientRole": false,
+        "containerId": "IPC",
+        "attributes": {}
+      },
+      {
+        "id": "53211600-1208-4973-9ff5-69c17f5d4d6d",
+        "name": "app-dac-manager",
+        "composite": false,
         "clientRole": false,
         "containerId": "IPC",
         "attributes": {}
@@ -3393,6 +3445,24 @@
           "containerId": "718803bc-8ffe-4a05-b80b-949283049b82",
           "attributes": {}
         }
+      ],
+      "dac-management": [
+        {
+          "id": "8c88b6e3-fb97-4a84-a9ca-25f0803d8019",
+          "name": "uma_protection",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "b006bab6-6f4f-43d1-af2f-8b64eb35df8f",
+          "attributes": {}
+        },
+        {
+          "id": "ee0d7985-c62a-4c7b-89fc-afc8af766f14",
+          "name": "dac-manager",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "b006bab6-6f4f-43d1-af2f-8b64eb35df8f",
+          "attributes": {}
+        }
       ]
     }
   },
@@ -3629,6 +3699,158 @@
         "offline_access",
         "microprofile-jwt"
       ]
+    },
+    {
+      "id": "b006bab6-6f4f-43d1-af2f-8b64eb35df8f",
+      "clientId": "dac-management",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "3046a5d4-610f-4847-8b9a-50a5269d8366",
+      "redirectUris": [
+        "*"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "authorizationServicesEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": false,
+      "protocol": "openid-connect",
+      "attributes": {
+        "saml.assertion.signature": "false",
+        "id.token.as.detached.signature": "false",
+        "saml.multivalued.roles": "false",
+        "saml.force.post.binding": "false",
+        "saml.encrypt": "false",
+        "oauth2.device.authorization.grant.enabled": "false",
+        "backchannel.logout.revoke.offline.tokens": "false",
+        "saml.server.signature": "false",
+        "saml.server.signature.keyinfo.ext": "false",
+        "use.refresh.tokens": "true",
+        "exclude.session.state.from.auth.response": "false",
+        "oidc.ciba.grant.enabled": "false",
+        "saml.artifact.binding": "false",
+        "backchannel.logout.session.required": "true",
+        "client_credentials.use_refresh_token": "false",
+        "saml_force_name_id_format": "false",
+        "saml.client.signature": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
+        "saml.authnstatement": "false",
+        "display.on.consent.screen": "false",
+        "saml.onetimeuse.condition": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": true,
+      "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "571ae743-2a7b-4419-983f-48e5fa422388",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "83211e4c-1dab-4c56-bc67-229441342483",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientId",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientId",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "47469d66-3152-4c5d-a810-1f957e899d66",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        }
+      ],
+      "defaultClientScopes": [
+        "web-origins",
+        "roles",
+        "profile",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ],
+      "authorizationSettings": {
+        "allowRemoteResourceManagement": true,
+        "policyEnforcementMode": "ENFORCING",
+        "resources": [
+          {
+            "name": "Default Resource",
+            "type": "urn:dac-management:resources:default",
+            "ownerManagedAccess": false,
+            "attributes": {},
+            "_id": "fe643274-f709-4f5c-9bde-8b50f76da648",
+            "uris": [
+              "/*"
+            ]
+          }
+        ],
+        "policies": [
+          {
+            "id": "d0d31087-db1c-443b-a841-44d1005b234f",
+            "name": "Default Policy",
+            "description": "A policy that grants access only for users within this realm",
+            "type": "js",
+            "logic": "POSITIVE",
+            "decisionStrategy": "AFFIRMATIVE",
+            "config": {
+              "code": "// by default, grants any permission associated with this policy\n$evaluation.grant();\n"
+            }
+          },
+          {
+            "id": "69c5316c-8584-47aa-97f5-d6118336d62b",
+            "name": "Default Permission",
+            "description": "A permission that applies to the default resource type",
+            "type": "resource",
+            "logic": "POSITIVE",
+            "decisionStrategy": "UNANIMOUS",
+            "config": {
+              "defaultResourceType": "urn:dac-management:resources:default",
+              "applyPolicies": "[\"Default Policy\"]"
+            }
+          }
+        ],
+        "scopes": [],
+        "decisionStrategy": "UNANIMOUS"
+      }
     },
     {
       "id": "0ca2f87a-4439-42cd-8905-c544558f4dbe",
