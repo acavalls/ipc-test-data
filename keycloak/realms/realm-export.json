@@ -2825,6 +2825,144 @@
       }
     },
     {
+      "id": "09264173-d07c-4de3-bdfc-04928da9aee8",
+      "username": "demo-user-1",
+      "enabled": true,
+      "email": "demo1@test.com",
+      "firstName": "demo-user-1",
+      "lastName": "demo-user-1",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "demo-user-1"
+        }
+      ],
+      "realmRoles": [
+        "app-user"
+      ],
+      "clientRoles": {
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "id": "97038f24-52ba-451e-adac-fa79f437d4af",
+      "username": "demo-user-2",
+      "enabled": true,
+      "email": "demo2@test.com",
+      "firstName": "demo-user-2",
+      "lastName": "demo-user-2",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "demo-user-2"
+        }
+      ],
+      "realmRoles": [
+        "app-user"
+      ],
+      "clientRoles": {
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "id": "e925f628-71c7-4625-bf8e-917b69fb2656",
+      "username": "demo-user-3",
+      "enabled": true,
+      "email": "demo3@test.com",
+      "firstName": "demo-user-3",
+      "lastName": "demo-user-3",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "demo-user-3"
+        }
+      ],
+      "realmRoles": [
+        "app-user"
+      ],
+      "clientRoles": {
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "id": "3faa7ab8-d889-4b89-ae79-991057da7d0f",
+      "username": "demo-user-4",
+      "enabled": true,
+      "email": "demo4@test.com",
+      "firstName": "demo-user-4",
+      "lastName": "demo-user-4",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "demo-user-4"
+        }
+      ],
+      "realmRoles": [
+        "app-user"
+      ],
+      "clientRoles": {
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "id": "c825c0b6-7199-483b-8d74-52152fee524a",
+      "username": "demo-user-5",
+      "enabled": true,
+      "email": "demo5@test.com",
+      "firstName": "demo-user-5",
+      "lastName": "demo-user-5",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "demo-user-5"
+        }
+      ],
+      "realmRoles": [
+        "app-user"
+      ],
+      "clientRoles": {
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    },
+    {
+      "id": "b0b53de3-c6c9-491c-ab4c-f521cc9f48c5",
+      "username": "demo-user-6",
+      "enabled": true,
+      "email": "demo6@test.com",
+      "firstName": "demo-user-6",
+      "lastName": "demo-user-6",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "demo-user-6"
+        }
+      ],
+      "realmRoles": [
+        "app-user"
+      ],
+      "clientRoles": {
+        "account": [
+          "view-profile",
+          "manage-account"
+        ]
+      }
+    },
+    {
       "id": "2f7739f7-15ea-45b9-a1ca-0b1ba1abf45e",
       "createdTimestamp": 1647507891728,
       "username": "service-account-dac-management",
