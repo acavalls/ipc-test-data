@@ -5192,7 +5192,7 @@
             "protocolMapper": "mongodb-scope-mapper",
             "consentRequired": false,
             "config": {
-              "mongodb-query-text": "{\naggregate: \"dacs\",\npipeline: \n[{\n    $match: {\n        \"members\": \"$$sub\"\n    }\n}, {\n    $group: {\n        \"_id\": null,\n        \"dac:members\": {\n            $push: \"$$ROOT.files.acl\"\n        }\n    }\n}, {\n    $project: {\n        \"_id\": 0,\n        \"dac:members\": 1\n    }\n}]\n}",
+              "mongodb-query-text": "{\naggregate: \"dacs\",\npipeline: \n[\n{\n    $match: {\n      members: \"$$sub\"\n    }\n},\n{\n    $lookup: {\n      from: \"policies\",\n      localField: \"policies\",\n      foreignField: \"_id\",\n      as: \"policies\"\n    }\n},\n{\n    $group: {\n      _id: null,\n      \"dac:members\": {\n        $push: \"$policies.acl\"\n      },    \n    },\n}\n]\n}",
               "mongodb-connection-uri": "mongodb://admin:password@172.21.0.1:27017/dac-portal-api?authSource=admin"
             }
           }
